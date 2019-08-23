@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-const StripeButton = ({ sku_id, name }) => {
+const StripeButton = ({ sku_id }) => {
   const [stripe, setStripe] = useState(undefined)
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const StripeButton = ({ sku_id, name }) => {
       action=""
     >
       <button type={ "submit" }>
-        Buy { name }
+        Credit card
       </button>
     </form>
   )

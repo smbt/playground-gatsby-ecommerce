@@ -38,9 +38,11 @@ const IndexPage = ({ data }) => {
   return <Layout>
     <SEO title="Home"/>
     <p>Welcome to playground-gatsby-ecommerce.</p>
-    {
-      data.allStripeSku.edges.map(sku => <Sku sku={ sku.node }/>)
-    }
+    <div style={ { display: 'flex' } }>
+      {
+        data.allStripeSku.edges.map(sku => <Sku sku={ sku.node } key={ sku.node.id }/>)
+      }
+    </div>
   </Layout>
 
 }

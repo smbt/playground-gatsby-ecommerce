@@ -38,10 +38,16 @@ const IndexPage = ({ data }) => {
   return <Layout>
     <SEO title="Home"/>
     <p>Welcome to playground-gatsby-ecommerce.</p>
-    <div style={ { display: 'flex' } }>
-      {
-        data.allStripeSku.edges.map(sku => <Sku sku={ sku.node } key={ sku.node.id }/>)
-      }
+    <div style={{
+      border: '1px solid rebeccapurple',
+      padding: 20,
+    }}>
+      <h3>Check out our <a href={ "https://dashboard.stripe.com" } target={ "_blank" }>stripe</a> powered products:</h3>
+      <div style={ { display: "flex" } }>
+        {
+          data.allStripeSku.edges.map(sku => <Sku sku={ sku.node } key={ sku.node.id }/>)
+        }
+      </div>
     </div>
   </Layout>
 

@@ -3,12 +3,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Button = () => {
-  const [stripe] = useState(window.Stripe("pk_test_fJeBDpFjDQ3ijdBrBi23i3Dk00RcsVwxMV"));
-  console.log('Hello from Button');
+  const [stripe, setStripe] = useState(undefined)
 
   useEffect(() => {
-      console.log('Hello from useEffect inside Button')
-  }, []);
+    setStripe(window.Stripe("pk_test_fJeBDpFjDQ3ijdBrBi23i3Dk00RcsVwxMV"))
+  }, [])
 
   return (
     <form

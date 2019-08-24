@@ -38,7 +38,7 @@ const IndexPage = ({data}) => {
 
     return <Layout>
         <SEO title="Home"/>
-        <Box component={'p'}>
+        <Box>
             <Typography varian={'body1'}>
                 Welcome to smbt´s{' '}
                 <Link href={'https://github.com/smbt/playground-gatsby-ecommerce'}

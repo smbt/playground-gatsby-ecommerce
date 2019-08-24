@@ -47,8 +47,8 @@ const Sku = ({sku}) => {
                                 size={'small'}
                                 color={'primary'}
                                 onClick={() => alert('Sorry. Paypal is not supported yet.')}
-                                borderRadius={0}
-                            >Paypal
+                            >
+                                Paypal
                             </Button>
                         </Box>
                     </Box>

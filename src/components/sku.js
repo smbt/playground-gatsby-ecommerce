@@ -1,43 +1,60 @@
-import React from "react"
-import Image from "gatsby-image"
-import StripeButton from "./stripeButton"
+// Libraries
+import React from 'react'
+import Image from 'gatsby-image'
+import {
+    Grid,
+    Box,
+    Button,
+    Card,
+    CardHeader,
+    CardContent,
+    Typography,
+} from '@material-ui/core'
 
-const Sku = ({ sku }) => {
+// Components
+import StripeButton from './stripeButton'
 
-  const { id, currency, price, attributes, localFiles } = sku
-  const formattedPrice = Intl.NumberFormat("de-DE", { style: "currency", currency: currency }).format(price / 100)
+const Sku = ({sku}) => {
 
-  return (
-    <div style={ {
-      padding: 20,
-      margin: 20,
-      borderWidth: 1,
-      borderColor: "rebeccapurple",
-      borderStyle: "solid",
-    } }>
-      <h2>{ attributes.name } ({ formattedPrice })</h2>
-      <div style={ {
-        display: "flex",
-        justifyContent: "center",
-      } }>
-        <Image
-          fluid={ localFiles[0].childImageSharp.fluid }
-          style={ { width: 100 } }
-        />
+    const {id, currency, price, attributes, localFiles} = sku
+    const formattedPrice = Intl.NumberFormat(
+        'de-DE',
+        {style: 'currency', currency: currency},
+    ).format(price / 100)
 
-      </div>
-      <br/>
-      <h3>Buy { attributes.name }</h3>
-      Payment options:
-      <StripeButton
-        sku_id={ id }
-      />
-      <button
-        onClick={ () => alert("Sorry. Paypal is not supported yet.") }
-      >Paypal
-      </button>
-    </div>
-  )
+    return (
+        <Grid item xs={10} sm={5} md={4}>
+            <Card p={2} border={'3px solid rebeccapurple'}>
+                <CardHeader title={`${attributes.name} (${formattedPrice})`}/>
+                <CardContent>
+                    <Box my={4}>
+                        <Image
+                            fluid={localFiles[0].childImageSharp.fluid}
+                            imgStyle={{objectFit: 'contain'}}
+                        />
+                    </Box>
+                    <Box>
+                        <Typography variant={'h6'} component={'h3'}>Payment options:</Typography>
+                        <Box my={1}>
+                            <StripeButton
+                                sku_id={id}
+                            />
+                        </Box>
+                        <Box>
+                            <Button
+                                variant={'outlined'}
+                                size={'small'}
+                                color={'primary'}
+                                onClick={() => alert('Sorry. Paypal is not supported yet.')}
+                                borderRadius={0}
+                            >Paypal
+                            </Button>
+                        </Box>
+                    </Box>
+                </CardContent>
+            </Card>
+        </Grid>
+    )
 }
 
 export default Sku

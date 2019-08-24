@@ -1,11 +1,17 @@
-// Library
+// Libraries
 import React, { useEffect, useState } from 'react'
 import { Button } from '@material-ui/core'
 
-const StripeButton = ({sku_id}) => {
-    const [stripe, setStripe] = useState(undefined)
+// Types
+interface Props {
+    sku_id: string;
+}
+
+const StripeButton = (props: Props) => {
+    const [stripe, setStripe] = useState<any | undefined>(undefined)
 
     useEffect(() => {
+        // @ts-ignore
         setStripe(window.Stripe('pk_test_fJeBDpFjDQ3ijdBrBi23i3Dk00RcsVwxMV'))
     }, [])
 
@@ -17,15 +23,15 @@ const StripeButton = ({sku_id}) => {
             onClick={event => {
                 console.log('pressed')
                 event.preventDefault()
-                stripe.redirectToCheckout({
-                    items: [{sku: sku_id, quantity: 1}],
+                if(!stripe) return;
+                stripe.redirectToCheckout!({
+                    items: [{ sku: props.sku_id, quantity: 1 }],
                     successUrl: 'http://localhost:8000/paymentSuccess',
                     cancelUrl: 'http://localhost:8000/paymentCanceled',
                 })
-                    .then(function(result) {
+                    .then(function(result: any) {
                         if (result.error) {
-                            const displayError = document.getElementById('error-message')
-                            displayError.textContent = result.error.message
+                            alert('An error has occured.')
                         }
                     })
             }}

@@ -14,12 +14,15 @@ import {
 // Components
 import StripeButton from './StripeButton'
 
-const Sku = ({sku}) => {
+// Types
+import { Sku as SkuType } from 'shared/types/Sku.interface'
 
-    const {id, currency, price, attributes, localFiles} = sku
+const Sku = (props: { sku: SkuType }) => {
+
+    const { id, currency, price, attributes, localFiles } = props.sku
     const formattedPrice = Intl.NumberFormat(
         'de-DE',
-        {style: 'currency', currency: currency},
+        { style: 'currency', currency: currency },
     ).format(price / 100)
 
     return (
@@ -30,8 +33,8 @@ const Sku = ({sku}) => {
                     <Box my={3}>
                         <Image
                             fluid={localFiles[0].childImageSharp.fluid}
-                            style={{height: 200}}
-                            imgStyle={{objectFit: 'contain'}}
+                            style={{ height: 200 }}
+                            imgStyle={{ objectFit: 'contain' }}
                         />
                     </Box>
                     <Box>

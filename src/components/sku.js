@@ -30,6 +30,7 @@ const Sku = ({sku}) => {
                     <Box my={3}>
                         <Image
                             fluid={localFiles[0].childImageSharp.fluid}
+                            style={{height: 200}}
                             imgStyle={{objectFit: 'contain'}}
                         />
                     </Box>

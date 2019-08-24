@@ -1,3 +1,5 @@
+const path = require('path')
+
 require(`dotenv`).config({
     path: `.env.development`,
 })
@@ -56,6 +58,16 @@ module.exports = {
                 objects: [`Product`, `Sku`],
                 secretKey: process.env.STRIPE_SECRET_KEY_READ_PRODUCTS_AND_SKUS,
                 downloadFiles: true,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    components: path.resolve(__dirname, `src/components`),
+                    pages: path.resolve(__dirname, `src/pages`),
+                    shared: path.resolve(__dirname, `src/shared`),
+                },
             },
         },
     ],

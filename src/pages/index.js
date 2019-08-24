@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Grid, Box, Typography } from '@material-ui/core'
+import { Grid, Box, Typography, Link } from '@material-ui/core'
 
 // Components
 import Layout from '../components/layout'
@@ -41,19 +41,19 @@ const IndexPage = ({data}) => {
         <Box component={'p'}>
             <Typography varian={'body1'}>
                 Welcome to smbt´s{' '}
-                <a href={'https://github.com/smbt/playground-gatsby-ecommerce'}
+                <Link href={'https://github.com/smbt/playground-gatsby-ecommerce'}
                    target={'_blank'}>
                     playground-gatsby-ecommerce
-                </a>
+                </Link>
                 .
             </Typography>
 
         </Box>
         <Box>
             <h3>Check out our{' '}
-                <a href={'https://dashboard.stripe.com'} target={'_blank'}>
+                <Link href={'https://dashboard.stripe.com'} target={'_blank'}>
                     stripe
-                </a>
+                </Link>
                 {' '}powered products:
             </h3>
             <Grid

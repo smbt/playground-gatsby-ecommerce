@@ -27,7 +27,7 @@ const Sku = ({sku}) => {
             <Card p={2} border={'3px solid rebeccapurple'}>
                 <CardHeader title={`${attributes.name} (${formattedPrice})`}/>
                 <CardContent>
-                    <Box my={4}>
+                    <Box my={3}>
                         <Image
                             fluid={localFiles[0].childImageSharp.fluid}
                             imgStyle={{objectFit: 'contain'}}

@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from './Header'
 
 // Styles
-import '../styles/root.css'
+import '../shared/styles/root.css'
 
 const Layout = ({children}) => {
     const data = useStaticQuery(graphql`

@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core'
 
 // Components
-import StripeButton from './stripeButton'
+import StripeButton from './StripeButton'
 
 const Sku = ({sku}) => {
 

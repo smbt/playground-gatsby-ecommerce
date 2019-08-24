@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby';
 import Layout from "../components/layout"
 
-const SuccessPage = () => (
+const PaymentSuccessPage = () => (
   <Layout>
     Thanks for shopping!
     <br/>
@@ -10,4 +10,4 @@ const SuccessPage = () => (
   </Layout>
 )
 
-export default SuccessPage
+export default PaymentSuccessPage

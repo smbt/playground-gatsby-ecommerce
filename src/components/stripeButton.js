@@ -19,8 +19,8 @@ const StripeButton = ({sku_id}) => {
                 event.preventDefault()
                 stripe.redirectToCheckout({
                     items: [{sku: sku_id, quantity: 1}],
-                    successUrl: 'http://localhost:8000/success',
-                    cancelUrl: 'http://localhost:8000/canceled',
+                    successUrl: 'http://localhost:8000/paymentSuccess',
+                    cancelUrl: 'http://localhost:8000/paymentCanceled',
                 })
                     .then(function(result) {
                         if (result.error) {

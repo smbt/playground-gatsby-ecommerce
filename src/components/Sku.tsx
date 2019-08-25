@@ -17,7 +17,11 @@ import StripeButton from './StripeButton'
 // Types
 import { Sku as SkuType } from 'shared/types/Sku.interface'
 
-const Sku = (props: { sku: SkuType }) => {
+interface Props {
+    sku: SkuType
+}
+
+const Sku = (props: Props) => {
     const { id, currency, price, attributes, localFiles } = props.sku
     const formattedPrice = Intl.NumberFormat('de-DE', {
         style: 'currency',

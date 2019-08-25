@@ -71,9 +71,11 @@ const IndexPage = (props: Props) => {
                     powered products:
                 </h3>
                 <Grid container spacing={2} justify={'center'}>
-                    {props.data.allStripeSku.edges.map(sku => (
-                        <Sku sku={sku.node} key={sku.node.id} />
-                    ))}
+                    {props.data.allStripeSku.edges.map(
+                        (edge: { node: SkuType }) => (
+                            <Sku sku={edge.node} key={edge.node.id} />
+                        )
+                    )}
                 </Grid>
             </Box>
         </Layout>

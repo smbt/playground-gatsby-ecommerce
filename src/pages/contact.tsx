@@ -8,9 +8,9 @@ import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 
 const ContactPage = () => {
-    const [name, setName] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [message, setMessage] = useState(null)
+    const [name, setName] = useState<string | null>(null)
+    const [email, setEmail] = useState<string | null>(null)
+    const [message, setMessage] = useState<string | null>(null)
 
     const handleSubmit = () => {
         console.warn('Sending must be implemented')

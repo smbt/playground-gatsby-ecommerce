@@ -9,20 +9,24 @@ import Header from './Header'
 // Styles
 import '../shared/styles/root.css'
 
-const Layout = ({children}) => {
+interface Props {
+    children: JSX.Element
+}
+
+const Layout = (props: Props) => {
     const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata.title}/>
+            <Header siteTitle={data.site.siteMetadata.title} />
             <div
                 style={{
                     margin: `0 auto`,
@@ -31,7 +35,7 @@ const Layout = ({children}) => {
                     paddingTop: 0,
                 }}
             >
-                <main>{children}</main>
+                <main>{props.children}</main>
             </div>
         </>
     )

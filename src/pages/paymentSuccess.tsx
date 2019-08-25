@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 
-const PaymentCanceledPage = () => (
+const PaymentSuccessPage = () => (
     <Layout>
-        Canceled
-        <br/>
+        Thanks for shopping!
+        <br />
         <Link to={'/'}>Go home</Link>
     </Layout>
 )
 
-export default PaymentCanceledPage
+export default PaymentSuccessPage

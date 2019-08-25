@@ -10,7 +10,7 @@ import Header from './Header'
 import '../shared/styles/root.css'
 
 interface Props {
-    children: JSX.Element
+    children: Array<JSX.Element | string>
 }
 
 const Layout = (props: Props) => {

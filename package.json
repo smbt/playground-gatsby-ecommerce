@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.2",
+    "@types/react-helmet": "^5.0.9",
     "gatsby-plugin-typescript": "^2.1.5",
     "prettier": "^1.18.2",
     "tslint": "^5.19.0"

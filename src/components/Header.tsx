@@ -5,7 +5,7 @@ import { navigate } from 'gatsby'
 import { AppBar, Typography, Toolbar, Button } from '@material-ui/core'
 
 // Data
-import pages from 'shared/constants/pages'
+import pages from 'constants/pages'
 
 interface Props {
     siteTitle: string

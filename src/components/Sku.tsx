@@ -12,10 +12,10 @@ import {
 } from '@material-ui/core'
 
 // Components
-import StripeButton from './StripeButton'
+import StripeButton from 'components/StripeButton'
 
 // Types
-import { Sku as SkuType } from 'shared/types/Sku.interface'
+import { Sku as SkuType } from 'types/Sku.interface'
 
 interface Props {
     sku: SkuType

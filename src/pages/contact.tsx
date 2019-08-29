@@ -4,8 +4,8 @@ import { navigate } from 'gatsby'
 import { Typography, Container, TextField, Button } from '@material-ui/core'
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/Seo'
+import Layout from 'components/Layout'
+import SEO from 'components/Seo'
 
 const ContactPage = () => {
     const [name, setName] = useState<string | null>(null)

@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // Components
-import Header from './Header'
+import Header from 'components/Header'
 
 // Styles
-import '../shared/styles/root.css'
+import 'styles/root.css'
 
 interface Props {
     children: Array<JSX.Element | string>

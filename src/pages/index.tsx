@@ -4,12 +4,12 @@ import { graphql } from 'gatsby'
 import { Grid, Box, Typography, Link } from '@material-ui/core'
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/Seo'
-import Sku from '../components/Sku'
+import Layout from 'components/Layout'
+import SEO from 'components/Seo'
+import Sku from 'components/Sku'
 
 // Types
-import { Sku as SkuType } from 'shared/types/Sku.interface'
+import { Sku as SkuType } from 'types/Sku.interface'
 
 // Data
 export const allStripeSku = graphql`

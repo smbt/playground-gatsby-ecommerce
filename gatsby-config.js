@@ -4,7 +4,6 @@ require(`dotenv`).config({
     path: `.env.development`,
 })
 
-
 module.exports = {
     siteMetadata: {
         title: `playground-gatsby-ecommerce`,
@@ -19,25 +18,21 @@ module.exports = {
         {
             resolve: `gatsby-plugin-typescript`,
             options: {
-                'target': 'es5',
-                'lib': [
-                    'dom',
-                    'dom.iterable',
-                    'esnext',
-                ],
-                'allowJs': true,
-                'skipLibCheck': true,
-                'esModuleInterop': true,
-                'allowSyntheticDefaultImports': true,
-                'strict': true,
-                'forceConsistentCasingInFileNames': true,
-                'module': 'esnext',
-                'moduleResolution': 'node',
-                'resolveJsonModule': true,
-                'isolatedModules': true,
-                'noEmit': true,
-                'jsx': 'preserve',
-                'baseUrl': 'src',
+                target: 'es5',
+                lib: ['dom', 'dom.iterable', 'esnext'],
+                allowJs: true,
+                skipLibCheck: true,
+                esModuleInterop: true,
+                allowSyntheticDefaultImports: true,
+                strict: true,
+                forceConsistentCasingInFileNames: true,
+                module: 'esnext',
+                moduleResolution: 'node',
+                resolveJsonModule: true,
+                isolatedModules: true,
+                noEmit: true,
+                jsx: 'preserve',
+                baseUrl: 'src',
             },
         },
         {
@@ -65,8 +60,11 @@ module.exports = {
             options: {
                 alias: {
                     components: path.resolve(__dirname, `src/components`),
+                    context: path.resolve(__dirname, `src/context`),
+                    constants: path.resolve(__dirname, `src/constants`),
                     pages: path.resolve(__dirname, `src/pages`),
-                    shared: path.resolve(__dirname, `src/shared`),
+                    styles: path.resolve(__dirname, `src/styles`),
+                    types: path.resolve(__dirname, `src/types`),
                 },
             },
         },

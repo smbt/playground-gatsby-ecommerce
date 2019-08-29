@@ -1,6 +1,9 @@
+// Node Modules
 import React from 'react'
 import { Link } from 'gatsby'
-import Layout from '../components/Layout'
+
+// Components
+import Layout from 'components/Layout'
 
 const PaymentSuccessPage = () => (
     <Layout>

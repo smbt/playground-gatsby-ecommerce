@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import { navigate } from 'gatsby'
 import { AppBar, Typography, Toolbar, Button } from '@material-ui/core'
 
+// Data
+import pages from 'shared/constants/pages'
+
 interface Props {
     siteTitle: string
 }
@@ -24,12 +27,14 @@ const Header = (props: Props) => (
                 >
                     {props.siteTitle}
                 </Typography>
-                <Button color={'inherit'} onClick={() => navigate('/')}>
-                    home
-                </Button>
-                <Button color={'inherit'} onClick={() => navigate('/contact')}>
-                    contact
-                </Button>
+                {pages.map(page => (
+                    <Button
+                        color={'inherit'}
+                        onClick={() => navigate(page.path)}
+                    >
+                        {page.title}
+                    </Button>
+                ))}
             </Toolbar>
         </AppBar>
     </header>

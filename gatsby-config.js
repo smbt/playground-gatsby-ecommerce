@@ -12,9 +12,17 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
-        `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-stripe`,
+        `gatsby-transformer-sharp`,
+        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src/`,
+            },
+        },
         {
             resolve: `gatsby-plugin-typescript`,
             options: {

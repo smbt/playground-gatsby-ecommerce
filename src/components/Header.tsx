@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
-import { navigate } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { AppBar, Typography, Toolbar, Button } from '@material-ui/core'
 
 // Data
@@ -28,12 +28,12 @@ const Header = (props: Props) => (
                     {props.siteTitle}
                 </Typography>
                 {pages.map(page => (
-                    <Button
-                        color={'inherit'}
-                        onClick={() => navigate(page.path)}
+                    <Link
+                        to={page.path}
+                        style={{ color: 'white', padding: 10 }}
                     >
                         {page.title}
-                    </Button>
+                    </Link>
                 ))}
             </Toolbar>
         </AppBar>

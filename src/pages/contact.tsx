@@ -1,6 +1,5 @@
 // Libraries
-import React, { useEffect, useState } from 'react'
-import { navigate } from 'gatsby'
+import React, { useState } from 'react'
 import { Typography, Container, TextField, Button } from '@material-ui/core'
 
 // Components
@@ -12,14 +11,9 @@ const ContactPage = () => {
     const [email, setEmail] = useState<string>('')
     const [message, setMessage] = useState<string>('')
 
-    const handleSubmit = () => {
-        // console.warn('Sending must be implemented')
-        // navigate('/contactSuccess')
-    }
-
     return (
         <Layout>
-            <SEO title={'contact'} />
+            <SEO title={'contact'}/>
             <Typography variant={'h6'} component={'h2'}>
                 Contact us
             </Typography>
@@ -35,7 +29,7 @@ const ContactPage = () => {
                         fullWidth
                         margin={'normal'}
                     />
-                    <br />
+                    <br/>
                     <TextField
                         label={'E-mail'}
                         value={email}
@@ -43,7 +37,7 @@ const ContactPage = () => {
                         fullWidth
                         margin={'normal'}
                     />
-                    <br />
+                    <br/>
                     <TextField
                         label={'Message'}
                         value={message}
@@ -53,11 +47,7 @@ const ContactPage = () => {
                         fullWidth
                         margin={'normal'}
                     />
-                    <Button
-                        type="submit"
-                        onClick={handleSubmit}
-                        variant={'outlined'}
-                    >
+                    <Button type="submit" variant={'outlined'}>
                         send
                     </Button>
                 </form>
@@ -67,5 +57,3 @@ const ContactPage = () => {
 }
 
 export default ContactPage
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam voluptatum a nisi commodi, consequuntur inventore reprehenderit officiis totam harum maxime! Suscipit officiis beatae esse vitae, quisquam asperiores accusantium? Mollitia, laudantium eaque! Laborum hic dignissimos consequatur nobis placeat fuga cumque aut. Saepe perspiciatis debitis distinctio officiis! Est, libero soluta officia quasi tenetur, in, nihil corrupti repudiandae accusamus nemo omnis quia iure praesentium non esse dolores. Dicta id eveniet vitae perferendis dolores! Ullam, nemo. Inventore odit nulla molestias ipsa consequuntur aspernatur adipisci itaque. Nam, tenetur modi tempora beatae nulla animi perferendis adipisci quos, laudantium veniam voluptatum architecto debitis, commodi facilis quam!

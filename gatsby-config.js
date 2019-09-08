@@ -70,6 +70,7 @@ module.exports = {
                     components: path.resolve(__dirname, `src/components`),
                     context: path.resolve(__dirname, `src/context`),
                     constants: path.resolve(__dirname, `src/constants`),
+                    markdown: path.resolve(__dirname, `src/markdown`),
                     pages: path.resolve(__dirname, `src/pages`),
                     styles: path.resolve(__dirname, `src/styles`),
                     types: path.resolve(__dirname, `src/types`),

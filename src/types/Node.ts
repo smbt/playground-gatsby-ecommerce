@@ -1,4 +1,4 @@
-import { Internal } from 'types/graphql/Internal'
+import { Internal } from 'types/Internal'
 
 export interface Node {
     id: string

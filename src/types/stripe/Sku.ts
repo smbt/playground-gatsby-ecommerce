@@ -1,8 +1,8 @@
 import { Product } from './Product'
-import { PackageDimensions } from 'types/PackageDimensions'
+import { PackageDimensions } from 'types/stripe/PackageDimensions'
 import { FluidImage } from 'types/FluidImage'
-import { Node } from 'types/graphql/Node'
-import { Internal } from 'types/graphql/Internal'
+import { Node } from 'types/Node'
+import { Internal } from 'types/Internal'
 
 export type Sku = {
     id?: string

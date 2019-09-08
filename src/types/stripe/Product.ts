@@ -1,4 +1,4 @@
-import { PackageDimensions } from 'types/PackageDimensions'
+import { PackageDimensions } from 'types/stripe/PackageDimensions'
 
 export type Product = {
     id?: string

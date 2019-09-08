@@ -5,11 +5,10 @@ import { Grid, Box, Typography, Link } from '@material-ui/core'
 
 // Components
 import Layout from 'components/Layout'
-import SEO from 'components/Seo'
 import Sku from 'components/Sku'
 
 // Types
-import { Sku as SkuType } from 'types/Sku.interface'
+import { Sku as SkuType } from 'types/stripe/Sku'
 
 // Data
 export const allStripeSku = graphql`
@@ -44,7 +43,6 @@ interface Props {
 const IndexPage = (props: Props) => {
     return (
         <Layout>
-            <SEO title="Home" />
             <Box>
                 <Typography variant={'body1'}>
                     Welcome to smbt´s{' '}

@@ -4,7 +4,6 @@ import { Typography, Container, TextField, Button } from '@material-ui/core'
 
 // Components
 import Layout from 'components/Layout'
-import SEO from 'components/Seo'
 
 const ContactPage = () => {
     const [name, setName] = useState<string>('')
@@ -13,7 +12,6 @@ const ContactPage = () => {
 
     return (
         <Layout>
-            <SEO title={'contact'}/>
             <Typography variant={'h6'} component={'h2'}>
                 Contact us
             </Typography>

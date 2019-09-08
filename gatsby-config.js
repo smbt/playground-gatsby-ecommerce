@@ -14,6 +14,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-stripe`,
+        `gatsby-plugin-playground`,
         `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
         {

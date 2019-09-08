@@ -69,7 +69,7 @@ yarn-error.log
 .yarn-integrity
 
 .idea
-tsconfig.json
 *.jsx
 
+.vscode
 *.code-workspace

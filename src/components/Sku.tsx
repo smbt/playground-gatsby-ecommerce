@@ -15,7 +15,7 @@ import {
 import StripeButton from 'components/StripeButton'
 
 // Types
-import { Sku as SkuType } from 'types/Sku.interface'
+import { Sku as SkuType } from 'types/stripe/Sku'
 
 interface Props {
     sku: SkuType

@@ -15,6 +15,7 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-stripe`,
         `gatsby-plugin-playground`,
+        `gatsby-plugin-material-ui`,
         `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
         {

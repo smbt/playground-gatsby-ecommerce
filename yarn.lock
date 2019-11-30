@@ -2780,6 +2780,11 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -2959,6 +2964,13 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+clean-css@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
+  integrity sha512-4ZxI6dy4lrY6FHzfiy1aEOXgu4LIsW2MhwG0VBKdcoGoH/XLFgaHSdLTGr4O8Be6A8r3MOphEiI8Gc1n0ecf3g==
+  dependencies:
+    source-map "~0.6.0"
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -5575,6 +5587,15 @@ gatsby-plugin-manifest@^2.2.6:
     gatsby-core-utils "^1.0.6"
     semver "^5.7.1"
     sharp "^0.23.0"
+
+gatsby-plugin-material-ui@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-material-ui/-/gatsby-plugin-material-ui-2.1.6.tgz#7664f7b3027d68f2fabc2a1d5e9cf44a84103caa"
+  integrity sha512-6cysXuwRrrN+NHe9K77wbONqyH4KnS/smY2urx8+OlHUTa8JMG6tUUxiNNHM0HU7GjAu+kFoEB0vgWRWpQgKew==
+  dependencies:
+    autoprefixer "^9.6.1"
+    clean-css "^4.2.1"
+    postcss "^7.0.17"
 
 gatsby-plugin-offline@^2.2.7:
   version "2.2.10"
@@ -11734,7 +11755,7 @@ source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
 
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
+source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==

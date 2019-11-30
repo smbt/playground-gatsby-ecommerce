@@ -1,6 +1,6 @@
 export default [
     {
-        title: 'home',
+        title: 'shop',
         path: '/',
     },
     {

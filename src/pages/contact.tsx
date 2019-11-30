@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState } from 'react'
-import { Typography, Container, TextField, Button } from '@material-ui/core'
+import { Container, TextField, Button } from '@material-ui/core'
 
 // Components
 import Layout from 'components/Layout'
@@ -12,9 +12,7 @@ const ContactPage = () => {
 
     return (
         <Layout>
-            <Typography variant={'h6'} component={'h2'}>
-                Contact us
-            </Typography>
+            <h1> Contact us </h1>
             <Container maxWidth={'sm'}>
                 <form
                     action={'https://formspree.io/simon_foster116@yahoo.de'}

@@ -17,6 +17,7 @@ export default ({ data: { allMarkdownRemark: { edges } } }: any) => {
 
     return (
         <Layout>
+            <h1>Blog</h1>
             <div>
                 {
                     blogPosts.map(blogPost =>

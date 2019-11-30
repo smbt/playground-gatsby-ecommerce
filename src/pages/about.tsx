@@ -1,50 +1,83 @@
 // Node modules
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 
 // Components
 import Layout from 'components/Layout'
+import { Box, Grid, CircularProgress } from '@material-ui/core'
 
 interface Props {
     data: any
 }
 
+export const query = graphql`
+{
+  rickAndMorty {
+    characters {
+      results {
+        name
+      }
+    }
+  }
+}
+`
+
 export default (props: Props) => {
-    const data = props.data
-    console.log('data', data)
+
+    const tweetsStatic = props.data.rickAndMorty.characters.results
+    console.log('tweetsStatic:', tweetsStatic)
+
+    const [tweetsDynamic, setTweetsDynamic] = useState<{}[] | null>(null)
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {
+            setTweetsDynamic(data)
+        })
+    }, [])
+
     return (
         <Layout>
-            <div>
-                <h1>Amazing Pandas Eating Things</h1>
-                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-                {data.allMarkdownRemark.edges.map((edge: any) => (
-                    <div key={edge.node.id}>
-                        <h3>
-                            {edge.node.frontmatter.title}{' '}
-                            <span>— {edge.node.frontmatter.date}</span>
-                        </h3>
-                        <p>{edge.node.excerpt}</p>
-                    </div>
-                ))}
-            </div>
+            <h1>About our Shop</h1>
+            <h2>Our Story</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis cupiditate dignissimos, et
+            illum laborum molestias neque nesciunt nihil numquam odio odit omnis quas quis, repellat vel veritatis!
+            Consectetur, cumque eligendi expedita facilis iusto labore laboriosam nihil nobis perferendis porro possimus
+            qui quia, tempora temporibus voluptas? Aut eaque enim exercitationem explicabo impedit rerum ullam veniam.
+            Amet cupiditate delectus distinctio doloribus est exercitationem hic incidunt magni maxime nesciunt, optio
+            praesentium quam quis reprehenderit saepe, sequi similique temporibus ut veniam voluptatum! Aliquid amet at
+            dignissimos dolore dolorum ex facere illo itaque magnam, maiores minus officia provident quaerat repellat
+            reprehenderit sapiente sequi sit!
+            <br/>
+            <br/>
+            <Box>
+                <h2>See our lates tweets here</h2>
+                <Grid container>
+                    <Grid item xs={10} sm={5}>
+                        <h3>Fetched during built time</h3>
+                        {
+                            tweetsStatic
+                                ? tweetsStatic.map((tweet: any) => (
+                                    <div key={tweet.name} style={{ marginBottom: 20 }}>
+                                        <div>{tweet.name}</div>
+                                    </div>
+                                ))
+                                : null
+                        }
+                    </Grid>
+                    <Grid item xs={10} sm={5}>
+                        <h3>Fetched during <b>run time</b></h3>
+                        {
+                            tweetsDynamic
+                                ? tweetsDynamic.map((tweet: any) => (
+                                    <div key={tweet.id} style={{ marginBottom: 20 }}>
+                                        <div>{tweet.name}</div>
+                                    </div>
+                                ))
+                                : <CircularProgress style={{ margin: 'auto' }}/>
+                        }
+                    </Grid>
+                </Grid>
+            </Box>
         </Layout>
     )
 }
-
-export const query = graphql`
-    query {
-        allMarkdownRemark {
-            totalCount
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "DD MMMM, YYYY")
-                    }
-                    excerpt
-                }
-            }
-        }
-    }
-`

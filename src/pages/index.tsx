@@ -41,10 +41,10 @@ interface Props {
 }
 
 export default (props: Props) => {
-    const data = props.data
-    console.log('data', data)
+
     return (
         <Layout>
+            <h1>Ecommerce Prototype</h1>
             <Box>
                 <Typography variant={'body1'}>
                     Welcome to smbt´s{' '}
@@ -73,11 +73,13 @@ export default (props: Props) => {
                 <Grid container spacing={2} justify={'center'}>
                     {props.data.allStripeSku.edges.map(
                         (edge: { node: SkuType }) => (
-                            <Sku sku={edge.node} key={edge.node.id} />
-                        )
+                            <Sku sku={edge.node} key={edge.node.id}/>
+                        ),
                     )}
                 </Grid>
             </Box>
+
+
         </Layout>
     )
 }

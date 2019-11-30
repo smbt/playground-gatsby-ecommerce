@@ -4,12 +4,12 @@ export default [
         path: '/',
     },
     {
-        title: 'about',
-        path: '/about',
+        title: 'blog',
+        path: '/blog',
     },
     {
-        title: 'shop',
-        path: '/shop',
+        title: 'about',
+        path: '/about',
     },
     {
         title: 'cart',

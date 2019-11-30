@@ -1,8 +1,8 @@
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, navigate } from 'gatsby'
-import { AppBar, Typography, Toolbar, Button } from '@material-ui/core'
+import { Link } from 'gatsby'
+import { AppBar, Typography, Toolbar } from '@material-ui/core'
 
 // Data
 import pages from 'constants/pages'
@@ -31,6 +31,7 @@ const Header = (props: Props) => (
                     <Link
                         to={page.path}
                         style={{ color: 'white', padding: 10 }}
+                        key={page.title}
                     >
                         {page.title}
                     </Link>

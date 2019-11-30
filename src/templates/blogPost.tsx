@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from 'components/Layout'
 
 
@@ -15,6 +15,12 @@ export default function BlogPost({ data }: any) { // this prop will be injected 
                     <div
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
+                    <Link
+                        to={'/blog'}
+                        style={{ color: 'black' }}
+                    >
+                        Go back
+                    </Link>
                 </div>
             </div>
         </Layout>

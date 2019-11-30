@@ -36,7 +36,7 @@ const StripeButton = (props: Props) => {
                     })
             }}
         >
-            Credit card
+            Buy now
         </Button>
     )
 }

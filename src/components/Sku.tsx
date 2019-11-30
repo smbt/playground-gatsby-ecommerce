@@ -4,7 +4,6 @@ import Image from 'gatsby-image'
 import {
     Grid,
     Box,
-    Button,
     Card,
     CardHeader,
     CardContent,
@@ -46,18 +45,6 @@ const Sku = (props: Props) => {
                         </Typography>
                         <Box my={1}>
                             <StripeButton sku_id={id} />
-                        </Box>
-                        <Box>
-                            <Button
-                                variant={'outlined'}
-                                size={'small'}
-                                color={'primary'}
-                                onClick={() =>
-                                    alert('Sorry. Paypal is not supported yet.')
-                                }
-                            >
-                                Paypal
-                            </Button>
                         </Box>
                     </Box>
                 </CardContent>

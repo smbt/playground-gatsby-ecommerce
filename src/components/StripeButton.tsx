@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core'
 
 // Types
 interface Props {
-    sku_id: string;
+    sku_id: string
 }
 
 const StripeButton = (props: Props) => {
@@ -19,21 +19,19 @@ const StripeButton = (props: Props) => {
         <Button
             variant={'outlined'}
             size={'small'}
-            color={'primary'}
             onClick={event => {
                 console.log('pressed')
                 event.preventDefault()
-                if(!stripe) return;
+                if (!stripe) return
                 stripe.redirectToCheckout!({
                     items: [{ sku: props.sku_id, quantity: 1 }],
                     successUrl: 'http://localhost:8000/paymentSuccess',
                     cancelUrl: 'http://localhost:8000/paymentCanceled',
+                }).then(function(result: any) {
+                    if (result.error) {
+                        alert('An error has occured.')
+                    }
                 })
-                    .then(function(result: any) {
-                        if (result.error) {
-                            alert('An error has occured.')
-                        }
-                    })
             }}
         >
             Buy now

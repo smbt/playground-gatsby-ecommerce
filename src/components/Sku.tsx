@@ -1,14 +1,7 @@
 // Libraries
 import React from 'react'
 import Image from 'gatsby-image'
-import {
-    Grid,
-    Box,
-    Card,
-    CardHeader,
-    CardContent,
-    Typography,
-} from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 
 // Components
 import StripeButton from 'components/StripeButton'
@@ -29,26 +22,33 @@ const Sku = (props: Props) => {
 
     return (
         <Grid item xs={10} sm={5} md={4}>
-            <Card>
-                <CardHeader title={`${attributes.name} (${formattedPrice})`} />
-                <CardContent>
-                    <Box my={3}>
-                        <Image
-                            fluid={localFiles[0].childImageSharp.fluid}
-                            style={{ height: 200 }}
-                            imgStyle={{ objectFit: 'contain' }}
-                        />
+            <Box style={{ border: '1px solid #ddd', margin: 1 }}>
+                <Box my={3}>
+                    <Image
+                        fluid={localFiles[0].childImageSharp.fluid}
+                        style={{ height: 200 }}
+                        imgStyle={{ objectFit: 'contain' }}
+                    />
+                </Box>
+                <Box>
+                    <Box
+                        style={{
+                            textAlign: 'center',
+                            fontSize: 25,
+                            fontWeight: 'bold',
+                            color: '',
+                        }}
+                    >
+                        {attributes.name}
                     </Box>
-                    <Box>
-                        <Typography variant={'h6'} component={'h3'}>
-                            Payment options:
-                        </Typography>
-                        <Box my={1}>
-                            <StripeButton sku_id={id} />
-                        </Box>
+                    <Box my={0} style={{ textAlign: 'center', color: '#888' }}>
+                        {formattedPrice}
                     </Box>
-                </CardContent>
-            </Card>
+                    <Box my={2} style={{ textAlign: 'center' }}>
+                        <StripeButton sku_id={id} />
+                    </Box>
+                </Box>
+            </Box>
         </Grid>
     )
 }

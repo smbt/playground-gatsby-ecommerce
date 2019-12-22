@@ -87,13 +87,5 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
-        {
-            resolve: "gatsby-source-graphql",
-            options: {
-                typeName: "RMAPI",
-                fieldName: "rickAndMorty",
-                url: "https://rickandmortyapi-gql.now.sh/",
-            },
-        },
     ],
 }

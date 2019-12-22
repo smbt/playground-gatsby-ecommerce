@@ -2,9 +2,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Box } from '@material-ui/core'
 
 // Components
 import Header from 'components/Header'
+import Footer from 'components/Footer'
 
 // Styles
 import 'styles/root.css'
@@ -27,7 +29,7 @@ const Layout = (props: Props) => {
     return (
         <>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div
+            <Box
                 style={{
                     margin: `0 auto`,
                     maxWidth: 960,
@@ -36,7 +38,8 @@ const Layout = (props: Props) => {
                 }}
             >
                 <main>{props.children}</main>
-            </div>
+            </Box>
+            <Footer />
         </>
     )
 }

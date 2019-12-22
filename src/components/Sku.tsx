@@ -44,7 +44,7 @@ const Sku = (props: Props) => {
                     <Box my={0} style={{ textAlign: 'center', color: '#888' }}>
                         {formattedPrice}
                     </Box>
-                    <Box my={2} style={{ textAlign: 'center' }}>
+                    <Box mt={2} mb={3} style={{ textAlign: 'center' }}>
                         <StripeButton sku_id={id} />
                     </Box>
                 </Box>

@@ -44,20 +44,7 @@ export default (props: Props) => {
     return (
         <Layout>
             <h1>Ecommerce Prototype</h1>
-            <Box>
-                <Typography variant={'body1'}>
-                    Welcome to smbt´s{' '}
-                    <Link
-                        href={
-                            'https://github.com/smbt/playground-gatsby-ecommerce'
-                        }
-                        target={'_blank'}
-                    >
-                        playground-gatsby-ecommerce
-                    </Link>
-                    .
-                </Typography>
-            </Box>
+
             <Box>
                 <h3>
                     Check out our{' '}

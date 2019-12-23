@@ -20,7 +20,7 @@ const Footer = () => (
         >
             Github
         </Link>
-        <GatsbyLink to={'/admin'}>admin</GatsbyLink>
+        <GatsbyLink to={'/admin/#/'}>admin</GatsbyLink>
     </Box>
 )
 

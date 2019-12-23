@@ -1,5 +1,5 @@
 // Node modules
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Grid, Box, Link } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
@@ -42,7 +42,7 @@ interface Props {
 }
 
 export default (props: Props) => {
-    const netlifyIdentityRedirect = () => {
+    useEffect(() => {
         // @ts-ignore
         if (window.netlifyIdentity) {
             // @ts-ignore
@@ -55,7 +55,7 @@ export default (props: Props) => {
                 }
             })
         }
-    }
+    })
 
     return (
         <>
@@ -85,7 +85,6 @@ export default (props: Props) => {
                     </Grid>
                 </Box>
             </Layout>
-            {netlifyIdentityRedirect()}
         </>
     )
 }

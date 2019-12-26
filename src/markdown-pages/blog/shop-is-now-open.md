@@ -1,8 +1,9 @@
 ---
-path: '/blog/2019/12/09/shop-is-now-open'
-title: 'Shop is Now Open!'
+title: Shop is Now Open!
 date: '2019-12-09'
-author: 'Simon Brandt'
+featuredpost: false
+tags:
+  - test-tag
 ---
 
 ## What this is about

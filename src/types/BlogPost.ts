@@ -1,9 +1,10 @@
 export interface BlogPost {
     frontmatter: {
+        templateKey: string
         title: string
-        author: string
         date: string
-        path: string
+        featuredpost: string
+        tags: string[]
     }
     html: string
 }

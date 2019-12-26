@@ -26,7 +26,8 @@ exports.createPages = async ({
         edges {
           node {
             frontmatter {
-              path
+              date(formatString: "YYYY/MM/DD/")
+              title
             }
           }
         }
@@ -44,7 +45,7 @@ exports.createPages = async ({
     node
   }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: node.frontmatter.date + node.frontmatter.title,
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })

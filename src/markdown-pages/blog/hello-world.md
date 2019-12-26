@@ -1,8 +1,9 @@
 ---
-path: '/blog/2019/12/08/hello-world'
-title: 'Hello World'
+title: Hello World
 date: '2019-12-08'
-author: 'Simon Brandt'
+featuredpost: false
+tags:
+  - different-tag
 ---
 
 ## What this is about

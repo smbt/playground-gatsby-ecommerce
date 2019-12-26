@@ -1,5 +1,5 @@
 ---
-title: Shop is Now Open!
+title: Shop is Now Open
 date: '2019-12-09'
 featuredpost: false
 tags:

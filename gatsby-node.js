@@ -15,7 +15,7 @@ exports.createPages = async ({
     createPage
   } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogPost.tsx`)
+  const blogPostTemplate = path.resolve(`src/templates/blogPostTemplate.tsx`)
 
   const result = await graphql(`
     {
@@ -26,7 +26,6 @@ exports.createPages = async ({
         edges {
           node {
             frontmatter {
-              date(formatString: "YYYY/MM/DD/")
               title
             }
           }
@@ -45,7 +44,8 @@ exports.createPages = async ({
     node
   }) => {
     createPage({
-      path: node.frontmatter.date + node.frontmatter.title,
+      path: 'blog/' + node.frontmatter.title.toLowerCase().split(' ').join('-'),
+      title: node.frontmatter.title,
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })

@@ -1,7 +1,7 @@
 // Node modules
 import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
-import { Grid, Box, Link } from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -75,28 +75,17 @@ export default (props: Props) => {
                 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
             </Helmet>
             <BackgroundImage
-    fluid={props.data.backgroundImage.childImageSharp.fluid}
-    style={{ width: '100%', height: 400 }}
-    />
+                fluid={props.data.backgroundImage.childImageSharp.fluid}
+                style={{ width: '100%', height: 400 }}
+            />
             <Layout>
-                <h1>Ecommerce Prototype</h1>
-
+                <h1>eCommerce Prototype</h1>
                 <Box>
-                    <h3>
-                        Check out our{' '}
-                        <Link
-                            href={'https://dashboard.stripe.com'}
-                            target={'_blank'}
-                        >
-                            stripe
-                        </Link>{' '}
-                        powered products:
-                    </h3>
                     <Grid container spacing={2} justify={'center'}>
                         {props.data.allStripeSku.edges.map(
                             (edge: { node: SkuType }) => (
-                                <Sku sku={edge.node} key={edge.node.id} />
-                            )
+                                <Sku sku={edge.node} key={edge.node.id}/>
+                            ),
                         )}
                     </Grid>
                 </Box>

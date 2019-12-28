@@ -8,13 +8,15 @@ type Props = {
 }
 
 export default function BlogPostSnippet(props: Props) {
-    const { frontmatter } = props.blogPost
+    const { blogPost } = props
+    const { frontmatter } = blogPost
 
     return (
         <div>
             <div>
-                <h1>{frontmatter.title}</h1>
-                <h4> {frontmatter.date}</h4>
+                <h2>{frontmatter.title}</h2>
+                <div style={{color: '#666', marginBottom: 20, fontFamily: 'sans-serif'}}>Published: {frontmatter.date}</div>
+                <div style={{marginBottom: 30}}>{props.blogPost.excerpt}</div>
                 <Link
                     to={
                         'blog/' +
@@ -23,7 +25,7 @@ export default function BlogPostSnippet(props: Props) {
                             .split(' ')
                             .join('-')
                     }
-                    style={{ color: 'black' }}
+                    style={{ color: 'black', float: 'right' }}
                 >
                     Read article
                 </Link>

@@ -12,10 +12,6 @@ export default [
         path: '/about',
     },
     {
-        title: 'cart',
-        path: '/cart',
-    },
-    {
         title: 'contact',
         path: '/contact',
     },

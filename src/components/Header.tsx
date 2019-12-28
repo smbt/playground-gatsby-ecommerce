@@ -14,7 +14,7 @@ const Header = () => (
         }}
     >
         <AppBar position={'static'} style={{
-            backgroundColor: `#f4ede2`,
+            backgroundColor: `#f9f4ed`,
         }}>
             <Toolbar style={{
                 justifyContent: `center`,

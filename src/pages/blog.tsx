@@ -24,9 +24,12 @@ export default ({
                 {blogPosts.map(blogPost => (
                     <Card
                         style={{
+                            paddingBottom: 30,
+                            paddingLeft: 30,
+                            paddingRight: 30,
+                            paddingTop: 0,
                             margin: 50,
-                            padding: 50,
-                            backgroundColor: '#eee',
+                            backgroundColor: '#fdfdfd',
                         }}
                     >
                         <BlogPostSnippet
@@ -50,9 +53,10 @@ export const query = graphql`
                 node {
                     html
                     id
+                    excerpt
                     frontmatter {
                         title
-                        date(formatString: "YYYY/MM/DD/")
+                        date(formatString: "YYYY/MM/DD")
                         featuredpost
                         tags
                     }

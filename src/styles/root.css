@@ -1,5 +1,6 @@
 html {
     font-family: Times, serif;
+    font-weight: 200;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -7,9 +8,9 @@ html {
 body {
     margin: 0;
     color: #49361c;
+    background-color: #fffcf8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff8ed;
 }
 
 a {
@@ -23,4 +24,21 @@ a, a:active, a:visited{
 
 a:hover {
     text-decoration: underline;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+h2, h3 {
+    font-family: sans-serif;
+    font-weight: 200;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+    padding: 10px 0 10px 0;
 }

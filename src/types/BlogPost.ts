@@ -6,5 +6,7 @@ export interface BlogPost {
         featuredpost: string
         tags: string[]
     }
+    id: number
+    excerpt: string
     html: string
 }

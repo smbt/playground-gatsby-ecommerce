@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Grid, Box, Link } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
+import BackgroundImage from 'gatsby-background-image'
 
 // Components
 import Layout from 'components/Layout'
@@ -12,7 +13,7 @@ import Sku from 'components/Sku'
 import { Sku as SkuType } from 'types/stripe/Sku'
 
 // Data
-export const allStripeSku = graphql`
+export const data = graphql`
     {
         allStripeSku {
             edges {
@@ -31,6 +32,13 @@ export const allStripeSku = graphql`
                             }
                         }
                     }
+                }
+            }
+        }
+        backgroundImage: file(relativePath: { eq: "background.jpg" }) {
+            childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                    ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
@@ -57,11 +65,19 @@ export default (props: Props) => {
         }
     })
 
+    useEffect(() => {
+        console.log('####')
+        console.log(props)
+    })
     return (
         <>
             <Helmet>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
             </Helmet>
+            <BackgroundImage
+    fluid={props.data.backgroundImage.childImageSharp.fluid}
+    style={{ width: '100%', height: 400 }}
+    />
             <Layout>
                 <h1>Ecommerce Prototype</h1>
 

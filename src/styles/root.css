@@ -1,15 +1,26 @@
 html {
-    font-family: sans-serif;
+    font-family: Times, serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
+    color: #49361c;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #fff8ed;
 }
 
-a, a:active, a:visited, a:hover {
-    color: rebeccapurple;
+a {
+    font-family: sans-serif;
+}
+
+a, a:active, a:visited{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

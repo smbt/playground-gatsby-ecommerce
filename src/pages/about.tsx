@@ -1,16 +1,11 @@
 // Node modules
 import React, { useEffect, useState } from 'react'
-import { graphql } from 'gatsby'
 
 // Components
 import Layout from 'components/Layout'
 import { Box, Grid, CircularProgress } from '@material-ui/core'
 
-interface Props {
-    data: any
-}
-
-export default (props: Props) => {
+export default () => {
     const [tweetsDynamic, setTweetsDynamic] = useState<{}[] | null>(null)
 
     useEffect(() => {
@@ -43,7 +38,7 @@ export default (props: Props) => {
                 <h2>See our lates tweets here</h2>
                 <Grid container>
                     <Grid item xs={10} sm={5}>
-                        <h3>Fetched during built time</h3>
+                        <h3>Fetched during build time</h3>
                     </Grid>
                     <Grid item xs={10} sm={5}>
                         <h3>

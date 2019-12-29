@@ -35,9 +35,9 @@ export const data = graphql`
                 }
             }
         }
-        backgroundImage: file(relativePath: { eq: "background.jpg" }) {
+        bannerImage: file(relativePath: { eq: "banner.jpg" }) {
             childImageSharp {
-                fluid(quality: 90, maxWidth: 4160) {
+                fluid(quality: 90, maxWidth: 2000) {
                     ...GatsbyImageSharpFluid_withWebp
                 }
             }
@@ -67,7 +67,7 @@ export default (props: Props) => {
 
     useEffect(() => {
         console.log('####')
-        console.log(props)
+        console.log(props.data.bannerImage.childImageSharp.fluid)
     })
     return (
         <>
@@ -75,7 +75,7 @@ export default (props: Props) => {
                 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
             </Helmet>
             <BackgroundImage
-                fluid={props.data.backgroundImage.childImageSharp.fluid}
+                fluid={props.data.bannerImage.childImageSharp.fluid}
                 style={{ width: '100%', height: 400 }}
             />
             <Layout>

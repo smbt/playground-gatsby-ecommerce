@@ -20,7 +20,7 @@ const StripeButton = (props: Props) => {
             variant={'outlined'}
             size={'small'}
             onClick={event => {
-                console.log('pressed')
+                console.log('successUrl: ' + process.env.BASE_URL + 'paymentSuccess')
                 event.preventDefault()
                 if (!stripe) return
                 stripe.redirectToCheckout!({

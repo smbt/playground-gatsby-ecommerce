@@ -17,7 +17,6 @@
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-plugin-stripe": "^1.2.2",
-    "gatsby-source-contentful": "^2.1.33",
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-source-graphql": "^2.1.25",
     "gatsby-source-stripe": "^3.0.3",

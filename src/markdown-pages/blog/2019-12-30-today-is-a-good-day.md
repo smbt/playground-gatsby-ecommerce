@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Today is a good day
-date: 2019-12-23T13:15:09.392Z
+date: 2019-12-30T13:15:09.392Z
 featuredpost: true
 tags:
   - fun lifestyle new-release

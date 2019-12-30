@@ -20,13 +20,13 @@ const StripeButton = (props: Props) => {
             variant={'outlined'}
             size={'small'}
             onClick={event => {
-                console.log('successUrl: ' + process.env.BASE_URL + 'paymentSuccess')
+                console.log('successUrl: ' + process.env.GATSBY_BASE_URL + 'paymentSuccess')
                 event.preventDefault()
                 if (!stripe) return
                 stripe.redirectToCheckout!({
                     items: [{ sku: props.sku_id, quantity: 1 }],
-                    successUrl: process.env.BASE_URL + 'paymentSuccess',
-                    cancelUrl:  process.env.BASE_URL + 'paymentCanceled',
+                    successUrl: process.env.GATSBY_BASE_URL + 'paymentSuccess',
+                    cancelUrl:  process.env.GATSBY_BASE_URL + 'paymentCanceled',
                 }).then(function(result: any) {
                     if (result.error) {
                         alert('An error has occured.')

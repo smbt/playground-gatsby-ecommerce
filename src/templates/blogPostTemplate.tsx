@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from 'components/Layout'
 
 export default function BlogPostTemplate({ data }: any) {
-    // this prop will be injected by the GraphQL query below.
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
@@ -25,7 +24,7 @@ export default function BlogPostTemplate({ data }: any) {
 }
 
 export const pageQuery = graphql`
-    query($title: String) {
+    query($title: String!) {
         markdownRemark(frontmatter: { title: { eq: $title } }) {
             html
             id

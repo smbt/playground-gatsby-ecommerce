@@ -1,7 +1,6 @@
 // Node modules
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Card } from '@material-ui/core'
 
 // Components
 import Layout from 'components/Layout'
@@ -9,10 +8,10 @@ import BlogPostSnippet from 'components/BlogPostSnippet'
 import { BlogPost } from 'types/BlogPost'
 
 export default ({
-    data: {
-        allMarkdownRemark: { edges },
-    },
-}: any) => {
+                    data: {
+                        allMarkdownRemark: { edges },
+                    },
+                }: any) => {
     const blogPosts: BlogPost[] = edges.map((edge: any) => edge.node)
 
     console.log('blogPosts:', blogPosts)
@@ -22,21 +21,10 @@ export default ({
             <h1>Blog</h1>
             <div>
                 {blogPosts.map(blogPost => (
-                    <Card
-                        style={{
-                            paddingBottom: 30,
-                            paddingLeft: 30,
-                            paddingRight: 30,
-                            paddingTop: 0,
-                            margin: 50,
-                            backgroundColor: '#fdfdfd',
-                        }}
-                    >
-                        <BlogPostSnippet
-                            blogPost={blogPost}
-                            key={blogPost.frontmatter.title}
-                        />
-                    </Card>
+                    <BlogPostSnippet
+                        blogPost={blogPost}
+                        key={blogPost.frontmatter.title}
+                    />
                 ))}
             </div>
         </Layout>

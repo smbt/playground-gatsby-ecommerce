@@ -25,8 +25,8 @@ const StripeButton = (props: Props) => {
                 if (!stripe) return
                 stripe.redirectToCheckout!({
                     items: [{ sku: props.sku_id, quantity: 1 }],
-                    successUrl: 'http://localhost:8000/paymentSuccess',
-                    cancelUrl: 'http://localhost:8000/paymentCanceled',
+                    successUrl: process.env.BASE_URL + 'paymentSuccess',
+                    cancelUrl:  process.env.BASE_URL + 'paymentCanceled',
                 }).then(function(result: any) {
                     if (result.error) {
                         alert('An error has occured.')

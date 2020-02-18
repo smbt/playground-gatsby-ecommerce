@@ -6,7 +6,7 @@ export default function BlogPostTemplate({ data }: any) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
-        <Layout>
+        <Layout footerPosition={'absolute'}>
             <div>
                 <div>
                     <h1>{frontmatter.title}</h1>

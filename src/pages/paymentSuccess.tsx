@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import Layout from 'components/Layout'
 
 const PaymentSuccessPage = () => (
-    <Layout>
+    <Layout footerPosition={'absolute'}>
         Thanks for shopping!
         <br />
         <Link to={'/'}>Back home</Link>

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from 'components/Layout'
 
 const PaymentCanceledPage = () => (
-    <Layout>
+    <Layout footerPosition={'absolute'}>
         Canceled
         <br />
         <Link to={'/'}>Back home</Link>

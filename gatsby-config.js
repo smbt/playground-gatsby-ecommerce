@@ -21,8 +21,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `markdown-pages`,
-                path: `${__dirname}/src/markdown-pages/`,
+                name: `markdown`,
+                path: `${__dirname}/src/markdown/`,
             },
         },
         {
@@ -68,7 +68,7 @@ module.exports = {
             resolve: `gatsby-source-stripe`,
             options: {
                 objects: [`Product`, `Sku`],
-                secretKey: process.env.STRIPE_SECRET_KEY_READ_PRODUCTS_AND_SKUS,
+                secretKey: process.env.STRIPE_SK_TEST,
                 downloadFiles: true,
             },
         },

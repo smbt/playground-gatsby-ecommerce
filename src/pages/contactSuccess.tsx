@@ -13,7 +13,7 @@ const contactSuccessPage = () => {
             Thank you for your message. We will get back to you as soon as
             possible!
             <br />
-            <Link to={'/'}>Go home</Link>
+            <Link to={'/'}>Back home</Link>
         </Layout>
     )
 }

@@ -6,7 +6,7 @@ const PaymentCanceledPage = () => (
     <Layout>
         Canceled
         <br />
-        <Link to={'/'}>Go home</Link>
+        <Link to={'/'}>Back home</Link>
     </Layout>
 )
 

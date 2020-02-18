@@ -1,2 +1,2 @@
-<h1>playground-gatsby-ecommerce</h1>
-https://smbt-playground-gatsby-ecommerce.netlify.com
+<h1>gatsby-ecommerce-prototype</h1>
+https://smbt-gatsby-ecommerce-prototype.netlify.com

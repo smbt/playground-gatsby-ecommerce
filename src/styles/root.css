@@ -67,3 +67,10 @@ h2, h3 {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+button {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 4px;
+}

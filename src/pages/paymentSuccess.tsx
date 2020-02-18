@@ -9,7 +9,7 @@ const PaymentSuccessPage = () => (
     <Layout>
         Thanks for shopping!
         <br />
-        <Link to={'/'}>Go home</Link>
+        <Link to={'/'}>Back home</Link>
     </Layout>
 )
 

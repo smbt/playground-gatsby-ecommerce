@@ -13,6 +13,7 @@ import 'styles/root.css'
 
 interface Props {
     children: Array<JSX.Element | string> | (JSX.Element | string)
+    footerPosition?: 'absolute' | 'relative'
 }
 
 const Layout = (props: Props) => {
@@ -25,6 +26,7 @@ const Layout = (props: Props) => {
             }
         }
     `)
+
 
     return (
         <>
@@ -39,7 +41,7 @@ const Layout = (props: Props) => {
             >
                 <main>{props.children}</main>
             </Box>
-            <Footer />
+            <Footer position={props.footerPosition} />
         </>
     )
 }

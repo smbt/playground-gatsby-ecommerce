@@ -14,8 +14,6 @@ export default ({
                 }: any) => {
     const blogPosts: BlogPost[] = edges.map((edge: any) => edge.node)
 
-    console.log('blogPosts:', blogPosts)
-
     return (
         <Layout>
             <h1>Blog</h1>

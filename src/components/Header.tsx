@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { AppBar, Toolbar } from '@material-ui/core'
+import { Helmet } from 'react-helmet';
 
 // Data
 import pages from 'constants/pages'
@@ -13,6 +14,9 @@ const Header = () => (
             marginBottom: `1.45rem`,
         }}
     >
+        <Helmet>
+            <title>{process.env.GATSBY_SITE_TITLE}</title>
+        </Helmet>
         <AppBar position={'static'} style={{
             backgroundColor: `#f9f4ed`,
         }}>

@@ -1,7 +1,7 @@
 {
-  "name": "playground-gatsby-ecommerce",
+  "name": "gatsby-ecommerce-prototype",
   "private": true,
-  "description": "playground-gatsby-ecommerce",
+  "description": "gatsby-ecommerce-prototype",
   "version": "0.1.0",
   "author": "Simon Brandt <simon_brandt@gmx.de>",
   "dependencies": {
@@ -48,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smbt/playground-gatsby-ecommerce"
+    "url": "https://github.com/smbt/gatsby-ecommerce-prototype"
   },
   "bugs": {
-    "url": "https://github.com/smbt/playground-gatsby-ecommerce/issues"
+    "url": "https://github.com/smbt/gatsby-ecommerce-prototype/issues"
   }
 }

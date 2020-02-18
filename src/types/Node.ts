@@ -1,4 +1,4 @@
-import { Internal } from 'types/Internal'
+import { Internal } from './Internal'
 
 export interface Node {
     id: string

@@ -8,10 +8,6 @@ export default [
         path: '/blog',
     },
     {
-        title: 'about',
-        path: '/about',
-    },
-    {
         title: 'contact',
         path: '/contact',
     },

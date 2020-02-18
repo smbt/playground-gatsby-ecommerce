@@ -11,11 +11,11 @@ const ContactPage = () => {
     const [message, setMessage] = useState<string>('')
 
     return (
-        <Layout>
+        <Layout footerPosition={'absolute'}>
             <h1> Contact us </h1>
             <Container maxWidth={'sm'}>
                 <form
-                    action={'https://formspree.io/simon_foster116@yahoo.de'}
+                    action={'https://formspree.io/simon.brandt@htw-dresden.de'}
                     method={'POST'}
                 >
                     <TextField
@@ -27,7 +27,7 @@ const ContactPage = () => {
                     />
                     <br/>
                     <TextField
-                        label={'E-mail'}
+                        label={'Email'}
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         fullWidth

@@ -13,7 +13,7 @@ const Footer = (props: Props) => (
         style={{
             position: props.position ? props.position : 'relative',
             bottom: '0px',
-            width: '100%',
+            // width: '100%',
             backgroundColor: '#eee',
             borderTop: '1px solid #ddd',
         }}

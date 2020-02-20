@@ -8,11 +8,11 @@ import BackgroundImage from 'gatsby-background-image'
 // Components
 import Layout from 'components/Layout'
 import Sku from 'components/Sku'
+import MoviePreview from 'components/MoviePreview'
 
 // Types
 import { Sku as SkuType } from 'types/stripe/Sku'
 import { Movie } from 'types/Movie'
-import MoviePreview from 'components/MoviePreview'
 
 // Data
 export const data = graphql`
@@ -91,6 +91,9 @@ export default (props: Props) => {
                 style={{ width: '100%', height: 400 }}
             />
             <Layout>
+
+                Teständerung für Präsentation
+
                 <h1>eCommerce Prototype</h1>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ducimus harum ipsam magnam qui soluta
                 voluptates. Distinctio dolorem harum, modi nobis optio repellat sequi? Accusamus adipisci aliquam

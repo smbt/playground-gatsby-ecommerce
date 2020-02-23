@@ -91,6 +91,7 @@ export default (props: Props) => {
                 style={{ width: '100%', height: 400 }}
             />
             <Layout>
+                Testcommit
                 <h1>eCommerce Prototype</h1>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ducimus harum ipsam magnam qui soluta
                 voluptates. Distinctio dolorem harum, modi nobis optio repellat sequi? Accusamus adipisci aliquam
